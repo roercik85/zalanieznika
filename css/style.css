@@ -1,14 +1,12 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-image: url("../images/tlo.png");
+  background-image: url("../images/tlo.webp");
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  color: #fff;
+  background-attachment: fixed;
+  color: #111;
 }
+
 
 nav {
   background-color: #005f73;
