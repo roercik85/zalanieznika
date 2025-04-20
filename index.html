@@ -8,6 +8,8 @@
 </head>
 <body>
 
+<div id="tlo"></div>
+
 <nav>
   <ul><li><a href="index.html">Strona główna</a></li>
     <li><a href="oferta.html">Oferta</a></li>
@@ -22,6 +24,28 @@
   <h1>Witamy w ZalanieZnika</h1>
   <p>Zajmujemy się kompleksowym usuwaniem szkód po zalaniu – skutecznie, szybko i profesjonalnie.</p>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta/dist/vanta.waves.min.js"></script>
+<script>
+  window.vantaEffect = VANTA.WAVES({
+    el: "#tlo",
+    color: 0x005f73,
+    shininess: 50,
+    waveHeight: 20,
+    waveSpeed: 1,
+    backgroundColor: 0x0a0a0a
+  });
+
+  setTimeout(() => {
+    if (window.vantaEffect) {
+      window.vantaEffect.destroy(); // zatrzymujemy fale
+    }
+
+    const tlo = document.getElementById("tlo");
+    tlo.style.backgroundImage = "url('images/tlo2.webp')";
+  }, 3000);
+</script>
 
 </body>
 </html>
