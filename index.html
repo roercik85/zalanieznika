@@ -5,18 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZalanieZnika – Usuwanie szkód po zalaniu</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
 <div id="tlo"></div>
 
 <nav>
-  <ul><li><a href="index.html">Strona główna</a></li>
+  <button class="burger" id="burger" onclick="toggleMenu()" aria-label="menu">
+    <i class="fas fa-bars" id="burger-icon"></i>
+  </button>
+  <ul class="menu" id="menu">
+    <li><a href="index.html">Strona główna</a></li>
     <li><a href="oferta.html">Oferta</a></li>
     <li><a href="dlaczego-my.html">Dlaczego my?</a></li>
     <li><a href="cennik.html">Cennik</a></li>
-    <li><a href="kontakt.html">Kontakt</a></li>
     <li><a href="galeria.html">Galeria</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
   </ul>
 </nav>
 
@@ -39,12 +44,28 @@
 
   setTimeout(() => {
     if (window.vantaEffect) {
-      window.vantaEffect.destroy(); // zatrzymujemy fale
+      window.vantaEffect.destroy();
     }
 
     const tlo = document.getElementById("tlo");
     tlo.style.backgroundImage = "url('images/tlo2.webp')";
   }, 3000);
+</script>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("menu");
+    const burgerIcon = document.getElementById("burger-icon");
+
+    menu.classList.toggle("active");
+
+    if (burgerIcon.classList.contains("fa-bars")) {
+      burgerIcon.classList.remove("fa-bars");
+      burgerIcon.classList.add("fa-xmark");
+    } else {
+      burgerIcon.classList.remove("fa-xmark");
+      burgerIcon.classList.add("fa-bars");
+    }
+  }
 </script>
 
 </body>

@@ -5,33 +5,75 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: #111;
+  margin: 0;
 }
-
 
 nav {
-  background-color: #005f73;
-  padding: 15px;
-}
-
-nav ul {
-  list-style: none;
+  background-color: #003049;
+  color: white;
+  padding: 1rem;
+  position: relative;
   display: flex;
-  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+}
+
+.burger {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  cursor: pointer;
+  z-index: 1001;
+  display: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 2rem;
   padding: 0;
+  margin: 0;
 }
 
-nav ul li {
-  margin-right: 20px;
-}
-
-nav ul li a {
+.menu li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
-nav ul li a:hover {
+.menu li a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    background-color: #003049;
+    padding: 1rem 0;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+  }
+
+  .menu.active {
+    display: flex;
+  }
 }
 
 .content {
@@ -65,8 +107,8 @@ nav ul li a:hover {
   height: 100%;
   z-index: -1;
   background-image: url("images/tlo2.webp");
-  background-size: cover;           /* ← kluczowy parametr */
-  background-position: center;      /* centrowanie obrazu */
-  background-repeat: no-repeat;     /* brak powtórzeń */
-  background-attachment: fixed;     /* opcjonalnie: efekt paralaksy */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
