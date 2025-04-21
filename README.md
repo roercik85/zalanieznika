@@ -4,8 +4,8 @@ Strona internetowa firmy zajmującej się kompleksowym usuwaniem szkód po zalan
 
 ## Podstrony
 
-- `index.html` – Strona główna
-- `oferta.html` – Opis oferty
+- `index.html` – STRONA GŁÓWNA
+- `co_nas_wyroznia.html` – Opis oferty
 - `dlaczego-my.html` – Informacje o firmie
 - `cennik.html` – Informacje o cenach
 - `kontakt.html` – Dane kontaktowe
@@ -17,6 +17,6 @@ Strona internetowa firmy zajmującej się kompleksowym usuwaniem szkód po zalan
 3. Przejdź do ustawień repozytorium → Pages → jako źródło wybierz `main` branch i folder `/root`.
 4. Gotowe! Strona będzie dostępna pod `https://twoja-nazwa.github.io/zalanieznika`.
 
-## Kontakt
+## KONTAKT
 
 kontakt@zalanieznika.pl

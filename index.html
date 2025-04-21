@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
@@ -17,18 +18,33 @@
     <i class="fas fa-bars" id="burger-icon"></i>
   </button>
   <ul class="menu" id="menu">
-    <li><a href="index.html">Strona główna</a></li>
-    <li><a href="oferta.html">Oferta</a></li>
-    <li><a href="dlaczego-my.html">Dlaczego my?</a></li>
-    <li><a href="cennik.html">Cennik</a></li>
-    <li><a href="galeria.html">Galeria</a></li>
-    <li><a href="kontakt.html">Kontakt</a></li>
+    <li><a href="index.html">STRONA GŁÓWNA</a></li>
+    <li><a href="co_nas_wyroznia.html">TO NAS WYRÓŻNIA</a></li>
+    <li><a href="cennik.html">CENNIK</a></li>
+    <li><a href="galeria.html">GALERIA</a></li>
+    <li><a href="kontakt.html">KONTAKT</a></li>
   </ul>
 </nav>
 
-<div class="content">
-  <h1>Witamy w ZalanieZnika</h1>
-  <p>Zajmujemy się kompleksowym usuwaniem szkód po zalaniu – skutecznie, szybko i profesjonalnie.</p>
+<div class="obrazek-z-wrapper">
+  <div class="obrazek-z-napisem">
+    <h2 class="malowany-napis">ZALANIE MIESZKANIA/DOMU?<br>DOBRZE TRAFIŁEŚ!</h2>
+  </div>
+  <div class="cta-bok">
+    <a href="tel:799043943" class="cta-button"><i class="fas fa-phone"></i> Zadzwoń</a>
+    <a href="mailto:kontakt@zalanieznika.pl" class="cta-button"><i class="fas fa-envelope"></i> Napisz</a>
+  </div>
+</div>
+
+<div class="efekt-napisy">
+  <h2 data-aos="fade-up" data-aos-delay="0">Przygotowanie nieruchomości do osuszania</h2>
+  <h2 data-aos="fade-up" data-aos-delay="300">Osuszanie realizowane przez sprawdzonych partnerów</h2>
+  <h2 data-aos="fade-up" data-aos-delay="600">Uzupełnianie tynku</h2>
+  <h2 data-aos="fade-up" data-aos-delay="900">Szpachlowanie</h2>  
+  <h2 data-aos="fade-up" data-aos-delay="1200">Malowanie</h2>
+  <h2 data-aos="fade-up" data-aos-delay="1500">Układanie płytek</h2>
+  <h2 data-aos="fade-up" data-aos-delay="1500">Układanie paneli podłogowych/parkietu</h2>
+  <h2 data-aos="fade-up" data-aos-delay="1800">Montowanie mebli</h2>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
@@ -47,26 +63,43 @@
     if (window.vantaEffect) {
       window.vantaEffect.destroy();
     }
-
     const tlo = document.getElementById("tlo");
     tlo.style.backgroundImage = "url('images/tlo2.webp')";
-  }, 3000);
+  }, 10000);
 </script>
 <script>
   function toggleMenu() {
     const menu = document.getElementById("menu");
     const burgerIcon = document.getElementById("burger-icon");
-
     menu.classList.toggle("active");
-
-    if (burgerIcon.classList.contains("fa-bars")) {
-      burgerIcon.classList.remove("fa-bars");
-      burgerIcon.classList.add("fa-xmark");
-    } else {
-      burgerIcon.classList.remove("fa-xmark");
-      burgerIcon.classList.add("fa-bars");
-    }
+    burgerIcon.classList.toggle("fa-bars");
+    burgerIcon.classList.toggle("fa-xmark");
   }
+</script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+<div class="footer-slogan">
+  <span class="haslo">kompleksowo</span>
+  <span class="haslo">czysto</span>
+  <span class="haslo">bezstresowo</span>
+</div>
+
+<script>
+  const hasla = document.querySelectorAll(".footer-slogan .haslo");
+  let aktywny = 0;
+  function podswietl() {
+    hasla.forEach((h, i) => h.classList.toggle("active", i === aktywny));
+    aktywny = (aktywny + 1) % hasla.length;
+  }
+  podswietl();
+  setInterval(podswietl, 3000);
 </script>
 
 </body>
