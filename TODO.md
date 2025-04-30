@@ -10,7 +10,7 @@
 - [x] Dodać informacje o demontażu i montażu paneli/parkietu
 - [ ] GALERIA „przed/po” z przesuwanym suwakiem
 - [ ] Integracja formularza kontaktowego
-- [ ] MENU DRUKOWANYMI LITERAMI
+- [x] MENU DRUKOWANYMI LITERAMI
 
 ## 📝 Do zbadania
 - Hosting zdjęć poza GitHub Pages
